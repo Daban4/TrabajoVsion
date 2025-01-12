@@ -50,3 +50,14 @@ def umbralizacion(imagen):
     segmentada = imagen
     segmentada[imagen>q] = 255
     return segmentada
+
+# Extracción de características HOG
+def extraccion_hog(imagen):
+    fd, imagen_hog = hog(
+        imagen,
+        orientations=8,
+        pixels_per_cell=(16, 16),
+        cells_per_block=(1, 1),
+        visualize=True  
+    )
+    return fd, imagen_hog
