@@ -44,3 +44,9 @@ def gradiente(imagen):
     E = np.sqrt(Ix**2 + Iy**2)
     Phi = np.arctan2(Ix, Iy)
     return E
+
+def umbralizacion(imagen):
+    q = np.median(imagen)
+    segmentada = imagen
+    segmentada[imagen>q] = 255
+    return segmentada
