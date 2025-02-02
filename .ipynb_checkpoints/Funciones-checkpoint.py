@@ -100,3 +100,7 @@ def reducir_mat(tamaño, posiciones, valores):
 
     return mat
 
+import numpy as np
+
+
+
